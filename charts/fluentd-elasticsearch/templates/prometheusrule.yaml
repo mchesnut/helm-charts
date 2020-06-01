@@ -1,5 +1,5 @@
 {{- if .Values.prometheusRule.enabled }}
-{{- $striped_version := (split "-" .Capabilities.KubeVersion.GitVersion)._0 -}}
+{{- $striped_version := (split "-" $.Capabilities.KubeVersion.Version)._0 -}}
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:

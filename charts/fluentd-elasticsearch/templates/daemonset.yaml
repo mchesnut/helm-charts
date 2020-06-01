@@ -1,5 +1,5 @@
 
-{{- $striped_version := (split "-" .Capabilities.KubeVersion.GitVersion)._0 -}}
+{{- $striped_version := (split "-" $.Capabilities.KubeVersion.Version)._0 -}}
 {{- if semverCompare ">= 1.9" $striped_version -}}
 apiVersion: apps/v1
 {{- else -}}
